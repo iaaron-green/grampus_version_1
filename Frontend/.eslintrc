@@ -1,0 +1,40 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended",
+      "airbnb",
+      "prettier",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": ["react", "import", "prettier", "jsx-a11y"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "rules": {
+      "react/prop-types": 0,
+      "no-console": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".js", ".jsx"]
+        }
+      ],
+      "no-underscore-dangle": 0,
+      "linebreak-style": ["error", "windows"],
+      "react/button-has-type": 0,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/no-static-element-interactions": 0,
+      "jsx-a11y/label-has-associated-control": 0,
+      "jsx-a11y/label-has-for": 0
+    }
+  }

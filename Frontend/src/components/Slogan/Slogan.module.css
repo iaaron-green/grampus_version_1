@@ -1,0 +1,23 @@
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  width: 35%;
+  height: 500px;
+}
+
+.title {
+  color: white;
+  font-size: 46px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-family: 'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  line-height: 1.5;
+  font-weight: 400;
+}

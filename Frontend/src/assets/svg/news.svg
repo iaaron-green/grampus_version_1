@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FC8F77;}
+	.st1{fill:#EFE9DF;}
+	.st2{fill:#302E2E;}
+	.st3{fill:#565353;}
+	.st4{fill:#F45338;}
+	.st5{fill:none;}
+	.st6{fill:#FFFFFF;}
+	.st7{font-family:'NiagaraSolid-Reg';}
+	.st8{font-size:20px;}
+</style>
+<g id="Шар_1">
+	<g>
+		<circle class="st0" cx="64.3" cy="64" r="62.3"/>
+	</g>
+</g>
+<g id="Шар_2">
+	<g>
+		<ellipse class="st1" cx="64.3" cy="64.3" rx="55.5" ry="56.3"/>
+	</g>
+</g>
+<g id="Шар_3">
+	<path class="st2" d="M68.5,104.7c-0.6,3-6.6,3.2-7.5,0V77h7.5V104.7z"/>
+</g>
+<g id="Шар_5">
+	<path class="st3" d="M52,62V37c1.3-13,22.5-13.8,24,0v25H52z"/>
+</g>
+<g id="Шар_4">
+	<g>
+		<rect x="46" y="51.5" class="st4" width="36.7" height="31.7"/>
+	</g>
+	<rect x="52.7" y="58.9" class="st5" width="28.8" height="20"/>
+	<text transform="matrix(1 0 0 1 52.6667 72.9167)" class="st6 st7 st8">News</text>
+</g>
+</svg>

@@ -1,0 +1,11 @@
+.auth {
+  background: #fff;
+  opacity: 0.88;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  width: 35%;
+  height: 500px;
+}

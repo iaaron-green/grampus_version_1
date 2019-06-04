@@ -1,0 +1,17 @@
+.person {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  border-bottom: 2px solid #e8e8e6;
+}
+
+.imgBG {
+  width: 150px;
+  height: 100px;
+  margin-right: 50px;
+  background: linear-gradient(
+      rgba(204, 204, 204, 0.3),
+      rgba(204, 204, 204, 0.3)
+    ),
+    url(../../../../assets/svg/user.svg) no-repeat center center;
+}

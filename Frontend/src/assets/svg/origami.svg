@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EF5050;}
+	.st1{fill:#F2E3C0;}
+	.st2{fill:#B25252;}
+	.st3{fill:#F2A5A5;}
+</style>
+<g id="Шар_1">
+	<g>
+		<circle class="st0" cx="64.3" cy="64" r="62.3"/>
+	</g>
+</g>
+<g id="Шар_2">
+	<g>
+		<ellipse class="st1" cx="64.3" cy="64.3" rx="55.5" ry="56.3"/>
+	</g>
+</g>
+<g id="Шар_3">
+	<polygon class="st2" points="49.5,35.6 61.2,61 96.2,34.7 	"/>
+	<g>
+		<polygon class="st0" points="59,97.9 49.5,35.6 81.7,65.9 		"/>
+	</g>
+	<polygon class="st3" points="27,79.4 59,97.9 70.7,81.4 	"/>
+</g>
+<g id="Шар_4">
+</g>
+</svg>

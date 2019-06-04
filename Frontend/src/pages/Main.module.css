@@ -1,0 +1,15 @@
+.auth {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/img/bg.png) no-repeat center center;
+  background-size: cover;
+  height: 645px;
+  margin: 0;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 70px 0;
+}

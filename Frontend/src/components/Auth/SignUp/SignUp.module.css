@@ -1,0 +1,108 @@
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+.input:focus {
+  outline: 1px solid #57dd49;
+}
+
+.button {
+  color: #fff;
+  background-color: #57dd49;
+  border-color: #57dd49;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 40px;
+  outline: 0;
+  line-height: 1.5;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: rgb(65, 196, 32);
+  border: 2px solid #dbfff5;
+  cursor: pointer;
+}
+
+.link {
+  outline: 0;
+  text-decoration: none;
+  color: #3cb833;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.link:hover {
+  color: #83eb73;
+}
+
+.name,
+.email,
+.lock {
+  position: relative;
+}
+
+.name:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: url('../../../assets/svg/user.svg') no-repeat center center;
+}
+
+.email:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: url('../../../assets/svg/email.svg') no-repeat center center;
+}
+
+.lock:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: url('../../../assets/svg/lock.svg') no-repeat center center;
+}

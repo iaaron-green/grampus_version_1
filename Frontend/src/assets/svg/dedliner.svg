@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6AA4E2;}
+	.st1{fill:#2F506D;}
+	.st2{fill:#EFEFEF;}
+	.st3{font-family:'MyriadPro-Regular';}
+	.st4{font-size:10px;}
+	.st5{fill:none;}
+	.st6{fill:#AAC9E0;}
+</style>
+<g id="Шар_1">
+	<g id="Шар_1_1_">
+		<g>
+			<circle class="st0" cx="64.3" cy="64" r="62.3"/>
+		</g>
+	</g>
+	<g id="Шар_2">
+		<g>
+			<ellipse class="st1" cx="64.3" cy="64.3" rx="55.5" ry="56.3"/>
+		</g>
+	</g>
+</g>
+<g id="Шар_2_1_">
+	<rect x="36" y="41.8" class="st2" width="13.6" height="2.5"/>
+	<rect x="36" y="59.3" class="st2" width="13.6" height="2.5"/>
+	<rect x="36" y="77.6" class="st2" width="13.6" height="2.5"/>
+	<rect x="36" y="96" class="st2" width="65.9" height="2.5"/>
+	<text transform="matrix(1 0 0 1 22.375 45.875)" class="st2 st3 st4">10</text>
+	<text transform="matrix(1 0 0 1 22.375 64)" class="st2 st3 st4">20</text>
+	<text transform="matrix(1 0 0 1 23 82.25)" class="st2 st3 st4">30</text>
+	<rect x="46.3" y="100.6" class="st5" width="61.1" height="8.9"/>
+	<text transform="matrix(1 0 0 1 46.25 107.7246)" class="st2 st3 st4">DEADLINE</text>
+	<path class="st2" d="M96.9,56.6"/>
+	<g>
+		<path class="st2" d="M65.4,59.1v13.6c3.6,1.7,6.6,1.5,9.3,0V59.1H65.4z"/>
+		<ellipse class="st2" cx="70.1" cy="75.8" rx="3.4" ry="3.1"/>
+		<polygon class="st2" points="65.4,72.7 61.3,78.1 63.3,86.9 66.3,86 63.8,78.4 69.2,72.7 		"/>
+		<polygon class="st2" points="74.7,72.7 81.6,68.1 80.1,62.3 78.2,62.5 79.4,66.9 73.4,70.4 		"/>
+		<polygon class="st2" points="65.7,59.7 60.1,51.1 68.2,42.3 70.4,46.1 64.1,51.5 69.6,59.7 		"/>
+		<polygon class="st2" points="70.9,59.1 73.4,51 72.8,41.7 76,41.7 76,50.4 74.7,59.1 72.2,61 		"/>
+	</g>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 18.6691 99.335)" class="st6" cx="66.9" cy="38.9" rx="1.6" ry="1.6"/>
+	<ellipse transform="matrix(0.9537 -0.3008 0.3008 0.9537 -7.0837 22.2442)" class="st6" cx="68.7" cy="34.1" rx="1.1" ry="1.1"/>
+	<ellipse transform="matrix(0.8894 -0.4572 0.4572 0.8894 -5.7606 32.6012)" class="st6" cx="64.5" cy="28.2" rx="0.9" ry="0.9"/>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 20.4506 91.9426)" class="st6" cx="63.5" cy="34.1" rx="1.7" ry="1.7"/>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 36.4933 88.0152)" class="st6" cx="69.2" cy="22.9" rx="1.4" ry="1.4"/>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 39.1232 80.0841)" class="st6" cx="65.9" cy="17.4" rx="1.1" ry="1.1"/>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 30.7771 92.0561)" class="st6" cx="68.7" cy="28.2" rx="0.9" ry="0.9"/>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 45.695 79.1765)" class="st6" cx="68.7" cy="13.1" rx="0.7" ry="0.7"/>
+	<ellipse transform="matrix(0.9796 -0.2009 0.2009 0.9796 -3.3833 14.1259)" class="st6" cx="67.9" cy="23.7" rx="1.1" ry="1.1"/>
+	<ellipse transform="matrix(0.1459 -0.9893 0.9893 0.1459 29.6417 97.2222)" class="st6" cx="71.1" cy="31.4" rx="1.1" ry="1.1"/>
+</g>
+<g id="Шар_4">
+</g>
+<g id="Шар_3">
+</g>
+</svg>
