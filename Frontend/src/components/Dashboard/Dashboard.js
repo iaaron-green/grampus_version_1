@@ -6,7 +6,6 @@ import UserNav from '../UserNav/UserNav';
 
 import Profile from './Profile/Profile';
 import RatingContainer from './Rating/RatingContainer';
-import MyInfo from './MyInfo/MyInfo';
 import SmartCalendar from './SmartCalendar/SmartCalendar';
 
 import ProtectedRoute from '../../hocs/ProtectedRoute';
@@ -61,12 +60,6 @@ class Dashboard extends Component {
               exact
               path={routes.CALENDAR}
               component={SmartCalendar}
-              redirectTo="/"
-            />
-            <ProtectedRoute
-              exact
-              path={routes.MYINFO}
-              component={MyInfo}
               redirectTo="/"
             />
             <Redirect to="profile" />
