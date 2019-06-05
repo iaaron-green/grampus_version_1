@@ -19,9 +19,9 @@ Instance steps
 Postman steps
 1. POST  register: http://localhost:8080/api/users/register
 2. POST  login:    http://localhost:8080/api/users/login
-3. GET   all profiles: http://localhost:8080/api/profile/all  (you shoud input user tocken to header)
-4. GET   profile by id: http://localhost:8080/api/profile/1   (you shoud input user tocken to header)
-5. PATCH input smth for change: http://localhost:8080/api/profile/1 (you should take json for this request from one of previous get)
+3. GET   all profiles: http://localhost:8080/api/profiles/all  (you shoud input user tocken to header)
+4. GET   profile by id: http://localhost:8080/api/profiles/1   (you shoud input user tocken to header)
+5. POST input smth for change: http://localhost:8080/api/profile (you should take json for this request from one of previous get)
 
 
 
