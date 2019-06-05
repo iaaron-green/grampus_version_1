@@ -1,10 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { authSelectors } from '../../../redux/auth';
+// configs
+import routes from '../../../configs/routes';
 // styles
 import styles from './AppNav.module.css';
 
-const AppNav = ({ items = [] }) => (
+const AppNav = ({ items = [], isAuthenticated }) => (
   <div className={styles.navigation}>
+    {isAuthenticated ? (
+      <button type="button" className={styles.button}>
+        <NavLink exact path to={routes.PROFILE} className={styles.nav}>
+          Go Back To Profile
+        </NavLink>
+      </button>
+    ) : null}
     <nav className={styles.navigation__items}>
       <ul className={styles.list}>
         {items.map(({ name, path }) => (
@@ -24,4 +35,11 @@ const AppNav = ({ items = [] }) => (
   </div>
 );
 
-export default AppNav;
+const mapStateToProps = state => ({
+  isAuthenticated: authSelectors.getIsAuthenticated(state),
+});
+
+export default connect(
+  mapStateToProps,
+  null,
+)(AppNav);
