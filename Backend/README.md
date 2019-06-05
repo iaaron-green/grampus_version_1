@@ -27,7 +27,8 @@ Postman steps
 5. POST Update fields in profile: "http://localhost:8080/api/profiles/" (you shoud input user token to header for this request)
 
  -- You need to change Profile Id to Profile that you want to give Rating ( 1 - is profile ID)
- -- ratingType is a variable that represent Like: "like_best_looker", "like_super_worker", "like_extrovert"
+ 
+ -- "ratingType" is a variable that represent Like: "like_best_looker", "like_super_worker", "like_extrovert"
     or Dislike type: "dislike_untidy", "dislike_deadliner", "like_introvert".
     
 6. POST LikeProfile  http://localhost:8080/api/profiles/1/like (you shoud input user token to header and "ratingType" to JSON for this request)
