@@ -77,7 +77,7 @@ public class RatingService {
         if (updatedRating.getRatingType().equals("dislike_deadliner")){
             updatedRating.setRatingType(DEADLINER.toString().toLowerCase());
         }
-        if (updatedRating.getRatingType().equals("like_introvert")){
+        if (updatedRating.getRatingType().equals("dislike_introvert")){
             updatedRating.setRatingType(INTROVERT.toString().toLowerCase());
         }
     }
