@@ -22,8 +22,11 @@ Postman steps
 2. POST Login User:  http://localhost:8080/api/users/login  (Generates user token if user was already created)
 
 3. GET All Profiles: http://localhost:8080/api/profiles/all  (you shoud input user token to header)
+
    or Search Profiles http://localhost:8080/api/profiles/all?fullname="" (you should input value in double quotes "" for search)
-4. GET Profile by Id: http://localhost:8080/api/profiles/1    ( 1 - is profile ID)   
+   
+4. GET Profile by Id: http://localhost:8080/api/profiles/1    ( 1 - is profile ID)
+
 5. POST Update fields in profile: "http://localhost:8080/api/profiles/" (you shoud input user token to header for this request)
 
  -- You need to change Profile Id to Profile that you want to give Rating ( 1 - is profile ID)
