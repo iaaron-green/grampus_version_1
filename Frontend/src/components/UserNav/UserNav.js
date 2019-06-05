@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { authActions } from '../../redux/auth';
@@ -34,7 +34,7 @@ class UserNav extends Component {
 
   render() {
     const { isSettingsOpen } = this.state;
-    const { items = [], settings = [] } = this.props;
+    const { items = [] } = this.props;
 
     return (
       <div className={styles.navigation}>
@@ -57,13 +57,6 @@ class UserNav extends Component {
             <span onClick={this.toggleSettings}>Settings</span>
             {isSettingsOpen && (
               <ul className={styles.list}>
-                {settings.map(({ name, path }) => (
-                  <li key={name} className={styles.link}>
-                    <Link exact to={path} className={styles.linkNav}>
-                      {name}
-                    </Link>
-                  </li>
-                ))}
                 <li key="logOut" className={styles.link}>
                   <button
                     type="button"
