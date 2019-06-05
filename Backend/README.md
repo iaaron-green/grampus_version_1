@@ -30,7 +30,7 @@ Postman steps
  
  -- "ratingType" is a variable that represent Like: "like_best_looker", "like_super_worker", "like_extrovert"
  
- -- or Dislike type: "dislike_untidy", "dislike_deadliner", "like_introvert".
+ -- or Dislike type: "dislike_untidy", "dislike_deadliner", "dislike_introvert".
     
 6. POST LikeProfile  http://localhost:8080/api/profiles/1/like (you shoud input user token to header and "ratingType" to JSON for this request)
 
