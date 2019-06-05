@@ -7,6 +7,43 @@
   align-items: center;
 }
 
+.nav {
+  color: #fff
+}
+
+.button {
+  color: #fff;
+  background-color: #57dd49;
+  border-color: #57dd49;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 40px;
+  outline: 0;
+  line-height: 1.5;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.nav:hover {
+  color: #ffffff;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: rgb(65, 196, 32);
+  cursor: pointer;
+}
+
 .list {
   display: flex;
   flex-direction: row;
