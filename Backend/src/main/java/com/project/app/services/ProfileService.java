@@ -87,13 +87,13 @@ public class ProfileService {
 
         profileRepository.findAll().iterator()
                 .forEachRemaining(profile -> {
-                    if (isProfileRaringEmptyAndNotEqualsCurrent(currentProfile, profile, profile.getRatings().isEmpty())) {
+                    if (isProfileRatingEmptyAndNotEqualsCurrent(currentProfile, profile, profile.getRatings().isEmpty())) {
                         getProfileWithLikeAvailability(likableProfiles, profile, true);
                         return;
                     } else if (isProfileRatingIncludeLikeFromCurrent(currentProfile, profile)) {
                         getProfileWithLikeAvailability(likableProfiles, profile, false);
                         return;
-                    } else if (isProfileRaringNotEmptyAndNotEqualsCurrent(currentProfile, profile, profile.getRatings().isEmpty())) {
+                    } else if (isProfileRatingNotEmptyAndNotEqualsCurrent(currentProfile, profile, profile.getRatings().isEmpty())) {
                         getProfileWithLikeAvailability(likableProfiles, profile, true);
                     }
                 });
@@ -117,11 +117,11 @@ public class ProfileService {
                                 .getRatingSourceUsername()));
     }
 
-    private boolean isProfileRaringEmptyAndNotEqualsCurrent(Profile currentProfile, Profile profile, boolean empty) {
+    private boolean isProfileRatingEmptyAndNotEqualsCurrent(Profile currentProfile, Profile profile, boolean empty) {
         return empty && !profile.equals(currentProfile);
     }
 
-    private boolean isProfileRaringNotEmptyAndNotEqualsCurrent(Profile currentProfile, Profile profile, boolean empty) {
+    private boolean isProfileRatingNotEmptyAndNotEqualsCurrent(Profile currentProfile, Profile profile, boolean empty) {
         return !empty && !profile.equals(currentProfile);
     }
 
