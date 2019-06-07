@@ -31,15 +31,27 @@ public class RatingService {
 
         Profile profile = profileRepository.findById(profileIdentifier).get();
         updatedRating.setProfileRating(profile);
+
         List<LikableProfile> allProfilesWithLikeOpportunity = profileService
-                .getAllProfilesWithLikeOpportunity(profile.getUser().getUsername());
+                .getAllProfilesWithLikeOpportunity(userName);
 
-        if (allProfilesWithLikeOpportunity.stream().filter(likableProfile -> likableProfile.getFullName().equals(userName))
-                .anyMatch(LikableProfile::getIsAbleToLike)) {
+        for (LikableProfile likableProfile : allProfilesWithLikeOpportunity) {
 
-            addLikeAndCheckForLikeType(updatedRating, userName, profile);
-            return ratingRepository.save(updatedRating);
+            if (profileRepository.findById(likableProfile.getProfileId()).get().getId().equals(profileIdentifier) &&
+                    likableProfile.getIsAbleToLike()) {
+
+                addLikeAndCheckForLikeType(updatedRating, userName, profile);
+                return ratingRepository.save(updatedRating);
+            }
         }
+
+        //if (allProfilesWithLikeOpportunity.stream().
+        //        filter(likableProfile -> profileRepository.findById(likableProfile.getProfileId()).get()
+        //                .getUser().getUsername().equals(userName))
+        //     //   .map(LikableProfile::getIsAbleToLike)
+        //        .findFirst().get().getIsAbleToLike()) {
+        //}
+
         return new Rating();
     }
 
@@ -68,13 +80,16 @@ public class RatingService {
         updatedRating.setProfileRating(profile);
 
         List<LikableProfile> allProfilesWithLikeOpportunity = profileService
-                .getAllProfilesWithLikeOpportunity(profile.getUser().getUsername());
+                .getAllProfilesWithLikeOpportunity(userName);
 
-        if (allProfilesWithLikeOpportunity.stream().filter(likableProfile -> likableProfile.getFullName().equals(userName))
-                .anyMatch(LikableProfile::getIsAbleToLike)) {
+        for (LikableProfile likableProfile : allProfilesWithLikeOpportunity) {
 
-            addDislikeAndCheckForDislikeType(updatedRating, userName, profile);
-            return ratingRepository.save(updatedRating);
+            if (profileRepository.findById(likableProfile.getProfileId()).get().getId().equals(profileIdentifier) &&
+                    likableProfile.getIsAbleToLike()) {
+
+                addDislikeAndCheckForDislikeType(updatedRating, userName, profile);
+                return ratingRepository.save(updatedRating);
+            }
         }
         return new Rating();
     }
