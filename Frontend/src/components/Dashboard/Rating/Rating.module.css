@@ -1,9 +1,41 @@
 .item {
   display: flex;
+  flex-direction: row;
+  border: 2px solid rgb(167, 158, 158);
+  border-top: none;
+  padding: 2rem;
+  height: 180px;
+  overflow-wrap: 'break-word';
 }
 
 .button {
   background-color: transparent;
+  margin: 20px;
   border: none;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
   color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.img {
+  border: 1px solid rgb(143, 136, 136);
+  min-width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(80, 75, 68);
+}
+
+.titles {
+  margin: 10px;
+  padding: 10px;
 }
