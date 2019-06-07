@@ -2,6 +2,7 @@ package com.project.app.services;
 
 import com.project.app.entities.Profile;
 import com.project.app.entities.Rating;
+import com.project.app.repositories.ProfileRepository;
 import com.project.app.repositories.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,17 +14,17 @@ import static com.project.app.entities.ProfilePositiveRating.*;
 public class RatingService {
 
     private RatingRepository ratingRepository;
-    private ProfileService profileService;
+    private ProfileRepository profileRepository;
 
     @Autowired
-    public RatingService(RatingRepository ratingRepository, ProfileService profileService) {
+    public RatingService(RatingRepository ratingRepository, ProfileRepository profileRepository) {
         this.ratingRepository = ratingRepository;
-        this.profileService = profileService;
+        this.profileRepository = profileRepository;
     }
 
     public Rating addLike(Long profileIdentifier, Rating updatedRating, String userName){
 
-        Profile profile = profileService.findProfileByIdentifier(profileIdentifier);
+        Profile profile = profileRepository.findById(profileIdentifier).get();
         updatedRating.setProfileRating(profile);
 
             if (!userName.equals(profile.getUser().getUsername())) {
@@ -54,7 +55,8 @@ public class RatingService {
 
     public Rating addDislike(Long profileIdentifier, Rating updatedRating, String userName){
 
-        Profile profile = profileService.findProfileByIdentifier(profileIdentifier);
+
+        Profile profile =  profileRepository.findById(profileIdentifier).get();
         updatedRating.setProfileRating(profile);
 
         if (!userName.equals(profile.getUser().getUsername())) {

@@ -1,8 +1,6 @@
 package com.project.app.services;
 
-import com.project.app.entities.LikableProfile;
-import com.project.app.entities.Profile;
-import com.project.app.entities.User;
+import com.project.app.entities.*;
 import com.project.app.exceptions.ProfileIdentifierException;
 import com.project.app.repositories.ProfileRepository;
 import com.project.app.repositories.UserRepository;
@@ -11,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.FileOutputStream;
 import java.util.*;
+import java.util.stream.Stream;
 
 @Service
 public class ProfileService {
@@ -24,11 +23,28 @@ public class ProfileService {
         this.userRepository = userRepository;
     }
 
-    public Profile findProfileByIdentifier(Long profileId) {
+  /*  public Profile findProfileByIdentifier(Long profileId) {
         if (profileId == null) {
             throw new ProfileIdentifierException("Profile ID '" + profileId + "' doesn't exists");
         }
         return profileRepository.findById(profileId).get();
+    }*/
+
+    public ProfileWithAchievements getProfileWithAchievements(Long profileId) {
+
+        Profile currentProfile = profileRepository.findById(profileId).get();
+
+        ProfileWithAchievements profileWithAchievements = new ProfileWithAchievements();
+        profileWithAchievements.setProfile(currentProfile);
+
+         currentProfile.getRatings().stream()
+                 .filter(rating -> rating.getRatingType()!=null).
+                 forEach(rating -> profileWithAchievements.getAchievements()
+                .put(rating.getRatingType(),
+                        profileWithAchievements.getAchievements().get(rating.getRatingType())!= null ?
+                        profileWithAchievements.getAchievements().get(rating.getRatingType())+1 : 1L));
+
+         return profileWithAchievements;
     }
 
     public Profile updateProfile(Profile updatedProfile, String principalName) {
@@ -42,7 +58,7 @@ public class ProfileService {
 
         if (principalName.equals(updatedProfile.getUser().getUsername())) {
 
-            Profile profileFromDB = findProfileByIdentifier(updatedProfile.getId());
+            Profile profileFromDB=profileRepository.findById(updatedProfile.getId()).get();
 
             if (updatedProfile.getInformation() != null) {
                 profileFromDB.setInformation(updatedProfile.getInformation());

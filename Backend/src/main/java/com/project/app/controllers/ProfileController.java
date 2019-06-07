@@ -2,6 +2,7 @@ package com.project.app.controllers;
 
 import com.project.app.entities.LikableProfile;
 import com.project.app.entities.Profile;
+import com.project.app.entities.ProfileWithAchievements;
 import com.project.app.entities.Rating;
 import com.project.app.services.ProfileService;
 import com.project.app.services.RatingService;
@@ -58,8 +59,8 @@ public class ProfileController {
 
     @GetMapping("/{profileId}")
     public ResponseEntity<?> getProfileById(@PathVariable Long profileId) {
-        Profile profile = profileService.findProfileByIdentifier(profileId);
-        return new ResponseEntity<>(profile, HttpStatus.OK);
+        ProfileWithAchievements profileWithAchievements = profileService.getProfileWithAchievements(profileId);
+        return new ResponseEntity<>(profileWithAchievements, HttpStatus.OK);
     }
 
     @PostMapping("")
