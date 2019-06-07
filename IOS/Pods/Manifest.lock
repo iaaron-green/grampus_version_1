@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.8.2)
+  - JWTDecode (2.3.0)
+  - SwiftyJSON (5.0.0)
+  - ValidationComponents (0.3.0):
+    - ValidationToolkit (~> 0.4.1)
+  - ValidationToolkit (0.4.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - JWTDecode (~> 2.3)
+  - SwiftyJSON
+  - ValidationComponents
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - JWTDecode
+    - SwiftyJSON
+    - ValidationComponents
+    - ValidationToolkit
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  JWTDecode: fb77675c8049c1a7e9433c7cf448c3ce33ee4ac7
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  ValidationComponents: fad1f9e9d7fbf3e10c893c880ef9d27627e90382
+  ValidationToolkit: ce8e9c1a5d49eddc3266a009d46df5ea22042dbc
+
+PODFILE CHECKSUM: 47c8f7a367f68a2240952eb10e86a956290c1a79
+
+COCOAPODS: 1.5.3
