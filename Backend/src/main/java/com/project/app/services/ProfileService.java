@@ -23,13 +23,6 @@ public class ProfileService {
         this.userRepository = userRepository;
     }
 
-  /*  public Profile findProfileByIdentifier(Long profileId) {
-        if (profileId == null) {
-            throw new ProfileIdentifierException("Profile ID '" + profileId + "' doesn't exists");
-        }
-        return profileRepository.findById(profileId).get();
-    }*/
-
     public ProfileWithAchievements getProfileWithAchievements(Long profileId) {
 
         Profile currentProfile = profileRepository.findById(profileId).get();
@@ -60,20 +53,24 @@ public class ProfileService {
 
             Profile profileFromDB=profileRepository.findById(updatedProfile.getId()).get();
 
-            if (updatedProfile.getInformation() != null) {
-                profileFromDB.setInformation(updatedProfile.getInformation());
-            }
-            if (updatedProfile.getSkills() != null) {
-                profileFromDB.setSkills(updatedProfile.getSkills());
-            }
-
-            if (profileFromDB.getProfilePicture() != null &&
-                    pictureDecoder(updatedProfile.getProfilePicture(), updatedProfile.getId()) != null) {
-                profileFromDB.setProfilePicture(updatedProfile.getId() + ".jpg");
-            }
+            isProfileFieldsUpdated(updatedProfile, profileFromDB);
             return profileRepository.save(profileFromDB);
         }
         return new Profile();
+    }
+
+    private void isProfileFieldsUpdated(Profile updatedProfile, Profile profileFromDB) {
+        if (updatedProfile.getInformation() != null) {
+            profileFromDB.setInformation(updatedProfile.getInformation());
+        }
+        if (updatedProfile.getSkills() != null) {
+            profileFromDB.setSkills(updatedProfile.getSkills());
+        }
+
+        if (profileFromDB.getProfilePicture() != null &&
+                pictureDecoder(updatedProfile.getProfilePicture(), updatedProfile.getId()) != null) {
+            profileFromDB.setProfilePicture(updatedProfile.getId() + ".jpg");
+        }
     }
 
     private void fixUpdatedProfileRatings(Profile updatedProfile, User currentUser) {
