@@ -22,7 +22,6 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
 
     // MARK: - Properties
     let API_URL = "\(dURL.dynamicURL.rawValue)profiles/all"
-    
     var json = JSON()
     
     // MARK: - Functions
@@ -41,6 +40,9 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
         
         navBarAppearance()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+
+    
         if revealViewController() != nil {
             _menuBarButton.target = self.revealViewController()
             _menuBarButton.action = #selector(SWRevealViewController().revealToggle(_:))
@@ -70,7 +72,7 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
                     
                     self.json = JSON(result)
                 
-                    print(self.json)
+//                    print(self.json)
                     self._tableView.reloadData()
                 }
                 
@@ -80,6 +82,13 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
             }
         }
         
+    }
+    
+    @objc func loadList(notification: NSNotification){
+        DispatchQueue.main.async {
+            self.fetchAllUsers()
+            self._tableView.reloadData()
+        }
     }
     
     func navBarAppearance() {
@@ -223,12 +232,17 @@ extension RatingViewController: UITableViewDelegate, UITableViewDataSource {
         print("likeDislikeButtonState -------------------------------")
         print(likeDislikeButtonState)
         
+        DispatchQueue.main.async {
+        
         if likeDislikeButtonState {
             cell._likeButton.isEnabled = true
             cell._dislikeButton.isEnabled = true
         } else {
             cell._likeButton.isEnabled = false
+            cell._likeButton.tintColor = UIColor.gray
             cell._dislikeButton.isEnabled = false
+            cell._dislikeButton.tintColor = UIColor.gray
+            }
         }
         
         DispatchQueue.main.async {
@@ -238,7 +252,7 @@ extension RatingViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell._likeButton.tag = indexPath.row
         cell._likeButton.addTarget(self, action: #selector(self.buttonClicked), for: UIControl.Event.touchUpInside)
-        
+
         return cell
         
     }

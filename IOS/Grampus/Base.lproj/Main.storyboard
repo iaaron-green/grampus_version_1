@@ -191,9 +191,10 @@
                                                     </constraints>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="dislike">
+                                                            <fragment content="Dislike">
                                                                 <attributes>
                                                                     <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     <integer key="NSUnderline" value="1"/>
                                                                 </attributes>
                                                             </fragment>

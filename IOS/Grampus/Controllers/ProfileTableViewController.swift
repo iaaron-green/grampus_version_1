@@ -46,12 +46,12 @@ class ProfileTableViewController: UITableViewController {
     var profilePicture: String?
     
     //Pie chart
-    var bestLooker = 1
-    var superWorker = 2
-    var extrovert = 3
-    var untidy = 4
-    var deadLiner = 5
-    var introvert = 6
+//    var bestLooker = 1
+//    var superWorker = 2
+//    var extrovert = 3
+//    var untidy = 4
+//    var deadLiner = 5
+//    var introvert = 6
     
     override func loadView() {
         super.loadView()
@@ -77,7 +77,7 @@ class ProfileTableViewController: UITableViewController {
         navBarAppearance()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "loadChart"), object: nil)
         //self.tableView.tableFooterView = UIView(frame: .zero)
         
         _navigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
@@ -100,6 +100,13 @@ class ProfileTableViewController: UITableViewController {
         def.set(true, forKey: userDefKeys.profileState.rawValue)
     }
     
+    
+    @objc func loadList(notification: NSNotification){
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func fetchUserInformation(userId: String) {
         
         let def = UserDefaults.standard
@@ -119,15 +126,27 @@ class ProfileTableViewController: UITableViewController {
             case .success :
                 
                 if let result = responseJSON.result.value {
+                   
                     let json = result as! NSDictionary
                     let profile = json["profile"] as! NSDictionary
+                    let achievements = json["achievements"] as! NSDictionary
                     let user = profile["user"] as! NSDictionary
                     
                     print("NSDictionary")
                     print(json)
                     print("USER")
                     print(user)
+                    print("achievements!!!!!!!!!!!!!!!!!!!")
+                    print(achievements)
+                    print("end!!!!!!!!!!!!!!!!!!!")
                     
+//                    self.pieChartViewController.bestLooker = achievements["best_looker"] as! Int
+//                    self.pieChartViewController.superWorker = achievements["super_worker"] as! Int
+//                    self.pieChartViewController.extrovert = achievements["extrovert"] as! Int
+//                    self.pieChartViewController.untidy = achievements["untidy"] as! Int
+//                    self.pieChartViewController.deadLiner = achievements["deadliner"] as! Int
+//                    self.pieChartViewController.introvert = achievements["introvert"] as! Int
+
                     self.fullName = user["fullName"] as? String
                     self.profession = user["jobTitle"] as? String
                     self.email = user["username"] as? String
@@ -179,7 +198,8 @@ class ProfileTableViewController: UITableViewController {
                     }
                     
                     
-                    
+                    self.pieChartViewController.setUpChart()
+                    self.tableView.reloadData()
                     self.setUpProfile(fullName: self.fullName!, profession: self.profession!, likes: self.likes!, dislikes: self.dislikes!, information: self.information!, skills: self.skills!)
                 }
                 
@@ -194,7 +214,7 @@ class ProfileTableViewController: UITableViewController {
         _profileFullNameLabel.text = fullName
         _profileProfessionLabel.text = profession
         _profileLikeLabel.text = "Likes: \(String(describing: likes))"
-        _profileDislikeLabel.text = "Disikes: \(String(describing: dislikes))"
+        _profileDislikeLabel.text = "Dislikes: \(String(describing: dislikes))"
         _profileInformationLabel.text = information
         _profileSkillsLabel.text = skills
         self.tableView.reloadData()

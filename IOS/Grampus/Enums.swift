@@ -7,14 +7,14 @@
 //
 
 import Foundation
-
+ 
 enum segueIdentifier: String {
     case login_to_profile = "login_to_profile"
     case rating_to_selected_profile = "rating_to_selected_profile"
 }
 
 enum dURL: String {
-    case dynamicURL = "http://10.11.1.79:8080/api/"
+    case dynamicURL = "http://10.11.1.48:8080/api/"
 }
 
 enum userDefKeys: String {

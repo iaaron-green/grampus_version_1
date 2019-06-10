@@ -61,6 +61,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             switch responseJSON.result {
             case .success :
                 
+                self.showAlert("You are successfully Signed Up!", "Now you need to Sign In")
+
+                
                 print(responseJSON.data)
                 print(responseJSON.result)
                 print(responseJSON.value)

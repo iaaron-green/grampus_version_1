@@ -24,7 +24,7 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var _countLabel: UILabel!
     
     var ratingType: String?
-    var likeState: Bool?
+    var likeState: Bool? // if true like, if false dislike
     var selectedUserId: Int?
 
     weak var delegate: ModalViewControllerDelegate?
@@ -85,6 +85,7 @@ class ModalViewController: UIViewController {
             
             switch responseJSON.result {
             case .success :
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
                 print("Success")
                 
             case .failure(let error) :
@@ -220,18 +221,10 @@ extension ModalViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         if range.length + range.location > _textField.text!.count {
-//            charactersCount = "\(_textField.text!.count)/24"
-//            _countLabel.text = String(describing: charactersCount)
             return false
         }
-        
         let newLenghth = _textField.text!.count + string.count - range.length
-        
-//        let charactersCount = _textField.text!.count
-//        _countLabel.text = "\(charactersCount)/24"
-        
         return newLenghth < 25
-        
     }
     
     @objc func textFieldDidChange(textField : UITextField){
