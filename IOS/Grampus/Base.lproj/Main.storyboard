@@ -189,6 +189,7 @@
                                                         <constraint firstAttribute="width" constant="42" id="5dZ-Bb-ETv"/>
                                                         <constraint firstAttribute="height" constant="30" id="QY4-E2-Ixf"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Dislike">
@@ -210,6 +211,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="cDl-A7-xhV"/>
                                                         <constraint firstAttribute="width" constant="42" id="kre-uj-66L"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Like">

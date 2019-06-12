@@ -23,6 +23,17 @@ class RatingTableViewCell: UITableViewCell {
         _imageViewCell.layer.borderWidth = 1.5
         _imageViewCell.layer.borderColor = UIColor.darkGray.cgColor
     }
+    
+    override func prepareForReuse() {
+        _nameLabelCell.text = ""
+        _professionLabelCell.text = ""
+        _likeButton.isEnabled = true
+        _likeButton.tintColor = UIColor.blue
+        _dislikeButton.tintColor = UIColor.blue
+        _dislikeButton.isEnabled = true
+        
+        super.prepareForReuse()
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

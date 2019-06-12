@@ -115,7 +115,7 @@ class ModalViewController: UIViewController {
         _cancelButton.layer.cornerRadius = 5
         _okButton.layer.cornerRadius = 5
     }
-    
+
     @IBAction func firstAction(_ sender: Any) {
         
         if likeState! {

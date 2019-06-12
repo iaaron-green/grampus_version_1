@@ -19,13 +19,14 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
     @IBOutlet weak var _menuBarButton: UIBarButtonItem!
     @IBOutlet weak var _searchBar: UISearchBar!
     @IBOutlet weak var _tableView: UITableView!
-
+    
+    
+    
     // MARK: - Properties
     let API_URL = "\(dURL.dynamicURL.rawValue)profiles/all"
     var json = JSON()
     
     // MARK: - Functions
-    
     override func loadView() {
         super.loadView()
         
@@ -41,8 +42,8 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
         navBarAppearance()
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
-
-    
+        
+        
         if revealViewController() != nil {
             _menuBarButton.target = self.revealViewController()
             _menuBarButton.action = #selector(SWRevealViewController().revealToggle(_:))
@@ -71,8 +72,8 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
                     
                     
                     self.json = JSON(result)
-                
-//                    print(self.json)
+                    
+                    
                     self._tableView.reloadData()
                 }
                 
@@ -81,6 +82,12 @@ class RatingViewController: UIViewController, ModalViewControllerDelegate {
                 
             }
         }
+        
+    }
+    
+    func parseJson() {
+        
+        
         
     }
     
@@ -189,70 +196,72 @@ extension RatingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ratingCell", for: indexPath) as! RatingTableViewCell
         
         var userNameToDisplay = ""
         var jobTitleToDisplay = ""
         var likeDislikeButtonState = true
         
-        if let id = self.json[indexPath.row]["profileId"].int {
-            print(id)
-        } else {
-            print("HERE WE GO AGAIN 1")
-        }
-        
-        if let userName = self.json[indexPath.row]["fullName"].string {
-            print(userName)
-            userNameToDisplay = userName
-        } else {
-            print("HERE WE GO AGAIN 2")
-        }
-        
-        if let jobTitle = self.json[indexPath.row]["jobTitle"].string {
-            jobTitleToDisplay = jobTitle
-            print(jobTitle)
-        } else {
-            print("HERE WE GO AGAIN 3")
-        }
-        
-        if let profilePicture = self.json[indexPath.row]["picture"].string {
-            print(profilePicture)
-        } else {
-            print("HERE WE GO AGAIN 4")
-        }
-        
-        if let isAbleToLike = self.json[indexPath.row]["isAbleToLike"].bool {
-            print("IS ABLE TO LIKE -------------------------------")
-            print(isAbleToLike)
-            likeDislikeButtonState = isAbleToLike
-        } else {
-            print("HERE WE GO AGAIN 5")
-        }
-        
-        print("likeDislikeButtonState -------------------------------")
-        print(likeDislikeButtonState)
-        
         DispatchQueue.main.async {
-        
-        if likeDislikeButtonState {
-            cell._likeButton.isEnabled = true
-            cell._dislikeButton.isEnabled = true
-        } else {
-            cell._likeButton.isEnabled = false
-            cell._likeButton.tintColor = UIColor.gray
-            cell._dislikeButton.isEnabled = false
-            cell._dislikeButton.tintColor = UIColor.gray
+            
+            if let id = self.json[indexPath.row]["profileId"].int {
+                print("/n")
+                print(id)
+            } else {
+                print("HERE WE GO AGAIN 1")
             }
+            
+            if let userName = self.json[indexPath.row]["fullName"].string {
+                print(userName)
+                userNameToDisplay = userName
+            } else {
+                print("HERE WE GO AGAIN 2")
+            }
+            
+            if let jobTitle = self.json[indexPath.row]["jobTitle"].string {
+                jobTitleToDisplay = jobTitle
+            } else {
+                print("HERE WE GO AGAIN 3")
+            }
+            
+            if let profilePicture = self.json[indexPath.row]["picture"].string {
+                print(profilePicture)
+            } else {
+                print("HERE WE GO AGAIN 4")
+            }
+            
+            if let isAbleToLike = self.json[indexPath.row]["isAbleToLike"].bool {
+                print("IS ABLE TO LIKE -------------------------------")
+                print(isAbleToLike)
+                likeDislikeButtonState = isAbleToLike
+            } else {
+                print("HERE WE GO AGAIN 5")
+            }
+            
+            print("likeDislikeButtonState -------------------------------")
+            print(likeDislikeButtonState)
+            
         }
         
         DispatchQueue.main.async {
             cell._nameLabelCell.text = userNameToDisplay
             cell._professionLabelCell.text = jobTitleToDisplay
+            
+            if likeDislikeButtonState {
+                cell._likeButton.isEnabled = true
+                cell._dislikeButton.isEnabled = true
+            } else {
+                cell._likeButton.isEnabled = false
+                cell._likeButton.tintColor = UIColor.gray
+                cell._dislikeButton.isEnabled = false
+                cell._dislikeButton.tintColor = UIColor.gray
+            }
         }
         
         cell._likeButton.tag = indexPath.row
         cell._likeButton.addTarget(self, action: #selector(self.buttonClicked), for: UIControl.Event.touchUpInside)
-
+        
         return cell
         
     }
@@ -260,7 +269,6 @@ extension RatingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let id = self.json[indexPath.row]["profileId"].int {
-            print("IDDDDDDDDDDD \(id)")
             let def = UserDefaults.standard
             def.set("\(id)", forKey: userDefKeys.selectedUserIdProfile.rawValue)
             def.set(false, forKey: userDefKeys.profileState.rawValue)

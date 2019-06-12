@@ -29,6 +29,7 @@
 		D9E73665229FD7F000D56849 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73661229FD7EF00D56849 /* PieChartViewController.swift */; };
 		D9E73667229FE9D600D56849 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73666229FE9D600D56849 /* Methods.swift */; };
 		D9E73669229FEA4900D56849 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73668229FEA4900D56849 /* AlertView.swift */; };
+		D9E9E87922B0E17D004B220D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9E87822B0E17D004B220D /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		D9E73661229FD7EF00D56849 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		D9E73666229FE9D600D56849 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
 		D9E73668229FEA4900D56849 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		D9E9E87822B0E17D004B220D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E2094CC2A80A1DC04FBFB3D9 /* Pods-Grampus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grampus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grampus/Pods-Grampus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				D90CFDA2229488B4002B8871 /* ProfileViewController.swift */,
 				D9E73666229FE9D600D56849 /* Methods.swift */,
 				D9E73668229FEA4900D56849 /* AlertView.swift */,
+				D9E9E87822B0E17D004B220D /* Utilities.swift */,
 			);
 			path = Grampus;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				D93B26F02292BFEF00741E7F /* AppDelegate.swift in Sources */,
 				D9E73662229FD7F000D56849 /* SimplePieChartView.swift in Sources */,
 				D90CFD9F22948204002B8871 /* SWRevealViewController.m in Sources */,
+				D9E9E87922B0E17D004B220D /* Utilities.swift in Sources */,
 				D9E73665229FD7F000D56849 /* PieChartViewController.swift in Sources */,
 				D9E73669229FEA4900D56849 /* AlertView.swift in Sources */,
 				D9E73667229FE9D600D56849 /* Methods.swift in Sources */,
