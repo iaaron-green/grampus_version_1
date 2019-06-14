@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Charts
 
 class ProfileTableViewController: UITableViewController {
     
@@ -31,9 +32,11 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var _profileSkillsLabel: UILabel!
     @IBOutlet weak var _skillsAddButton: UIButton!
     
+    //Chart cell
+    @IBOutlet weak var chartView: PieChartView!
+    
     let alert = AlertView()
     let menuVC = MenuTableViewController()
-    let pieChartViewController = PieChartViewController()
     
     var fullName: String?
     var email: String?
@@ -46,6 +49,10 @@ class ProfileTableViewController: UITableViewController {
     var profilePicture: String?
     var bestLooker: Int?
     var superWorker: Int?
+    var untidy: Int?
+    var deadLiner: Int?
+    var extrovert: Int?
+    var introvert: Int?
     
     override func loadView() {
         super.loadView()
@@ -84,7 +91,7 @@ class ProfileTableViewController: UITableViewController {
             self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         }
         
-        
+//        setUpCharts()
         
         tableView.reloadData()
     }
@@ -145,11 +152,12 @@ class ProfileTableViewController: UITableViewController {
                     self.skills = profile["skills"] as? String
                     
                     self.bestLooker = achievements["best_looker"] as? Int
-//                    let untidy = achievements["untidy"] as? String
                     self.superWorker = achievements["super_worker"] as? Int
-//                    let deadLiner = achievements["deadliner"] as? String
-//                    let extrovert = achievements["extrovert"] as? String
-//                    let introvert = achievements["introvert"] as? String
+                    self.extrovert = achievements["extrovert"] as? Int
+                    self.untidy = achievements["untidy"] as? Int
+                    self.deadLiner = achievements["deadliner"] as? Int
+                    self.introvert = achievements["introvert"] as? Int
+
                    
                     if let unwrappedbestLooker = self.bestLooker {
                         self.bestLooker = unwrappedbestLooker
@@ -163,15 +171,32 @@ class ProfileTableViewController: UITableViewController {
                         self.superWorker = 0
                     }
                     
+                    if let unwrappedextrovert = self.extrovert {
+                        self.extrovert = unwrappedextrovert
+                    } else {
+                        self.extrovert = 0
+                    }
+                    
+                    if let unwrappeduntidy = self.untidy {
+                        self.untidy = unwrappeduntidy
+                    } else {
+                        self.untidy = 0
+                    }
+                    
+                    if let unwrappeddeadLiner = self.deadLiner {
+                        self.deadLiner = unwrappeddeadLiner
+                    } else {
+                        self.deadLiner = 0
+                    }
+                    
+                    if let unwrappedintrovert = self.introvert {
+                        self.introvert = unwrappedintrovert
+                    } else {
+                        self.introvert = 0
+                    }
+                    
                     print(self.bestLooker!)
                     print(self.superWorker!)
-                    
-                    let def = UserDefaults.standard
-                    def.set(self.bestLooker!, forKey: "bestLooker")
-                    def.synchronize()
-                    
-                    def.set(self.superWorker!, forKey: "superWorker")
-                    def.synchronize()
                     
                     if let unwrappedFullName = self.fullName {
                         self.fullName = unwrappedFullName
@@ -215,16 +240,79 @@ class ProfileTableViewController: UITableViewController {
                         self.skills = "Skills"
                     }
                     
-                    
-//                    self.pieChartViewController.setUpChart()
-                    self.tableView.reloadData()
                     self.setUpProfile(fullName: self.fullName!, profession: self.profession!, likes: self.likes!, dislikes: self.dislikes!, information: self.information!, skills: self.skills!)
+                    
+                    self.setUpCharts()
+                    self.tableView.reloadData()
                 }
                 
             case .failure(let error) :
                 print(error)
             }
         }
+    }
+    
+    func setUpCharts() {
+        
+        chartView.chartDescription?.enabled = false
+        chartView.drawHoleEnabled = false
+        chartView.rotationAngle = 0
+        chartView.rotationEnabled = false
+        chartView.isUserInteractionEnabled = false
+
+        var bestLookerColor = UIColor.clear
+        var superWorkerColor = UIColor.clear
+        var extrovertColor = UIColor.clear
+        var untidyColor = UIColor.clear
+        var deadLinerColor = UIColor.clear
+        var introvertColor = UIColor.clear
+        
+        var entries: [PieChartDataEntry] = []
+        var colorArray: [UIColor] = []
+        
+        if self.bestLooker! != 0 {
+            entries.append(PieChartDataEntry(value: Double(self.bestLooker!), label: "\(self.bestLooker!)"))
+            bestLookerColor = UIColor.cyan
+            colorArray.append(bestLookerColor)
+        }
+        
+        if self.superWorker! != 0 {
+            entries.append(PieChartDataEntry(value: Double(self.superWorker!), label: "\(self.superWorker!)"))
+            superWorkerColor = UIColor.red
+            colorArray.append(superWorkerColor)
+        }
+        
+        if self.extrovert! != 0 {
+            entries.append(PieChartDataEntry(value: Double(self.extrovert!), label: "\(self.extrovert!)"))
+            extrovertColor = UIColor.blue
+            colorArray.append(extrovertColor)
+        }
+        
+        if self.untidy! != 0 {
+            entries.append(PieChartDataEntry(value: Double(self.untidy!), label: "\(self.untidy!)"))
+            untidyColor = UIColor.gray
+            colorArray.append(untidyColor)
+        }
+        
+        if self.deadLiner! != 0 {
+            entries.append(PieChartDataEntry(value: Double(self.deadLiner!), label: "\(self.deadLiner!)"))
+            deadLinerColor = UIColor.black
+            colorArray.append(deadLinerColor)
+        }
+        
+        if self.introvert! != 0 {
+            entries.append(PieChartDataEntry(value: Double(self.introvert!), label: "\(self.introvert!)"))
+            introvertColor = UIColor.brown
+            colorArray.append(introvertColor)
+        }
+        
+        print(entries)
+        
+        let dataSet = PieChartDataSet(entries: entries, label: "")
+        dataSet.colors = colorArray
+        dataSet.drawValuesEnabled = false
+        chartView.data = PieChartData(dataSet: dataSet)
+        
     }
     
     func setUpProfile( fullName: String, profession: String, likes: Int, dislikes: Int, information: String, skills: String) {

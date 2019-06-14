@@ -111,7 +111,7 @@ extension SegmentLabelFormatter {
 }
 
 @IBDesignable
-class PieChartView : UIView {
+class PieChartViewO : UIView {
 
   /// An array of structs representing the segments of the pie chart.
   var segments = [LabelledSegment]() {

@@ -848,21 +848,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6T-zu-l5e" customClass="PieChartView" customModule="Grampus" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6T-zu-l5e" customClass="PieChartView" customModule="Charts">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="ooa-q0-aoj"/>
+                                                        <constraint firstAttribute="height" constant="240" id="ooa-q0-aoj"/>
+                                                        <constraint firstAttribute="width" constant="240" id="vWz-CM-6xZ"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <segue destination="2oD-VD-Ev7" kind="embed" id="Od3-bw-z28"/>
-                                                    </connections>
                                                 </containerView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="m6T-zu-l5e" firstAttribute="top" secondItem="qgv-Sp-Bi6" secondAttribute="top" id="9Rj-Wy-tby"/>
                                                 <constraint firstItem="m6T-zu-l5e" firstAttribute="leading" secondItem="qgv-Sp-Bi6" secondAttribute="leading" id="ErS-y3-XWg"/>
-                                                <constraint firstAttribute="trailing" secondItem="m6T-zu-l5e" secondAttribute="trailing" id="X4k-8j-QdV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -887,6 +884,7 @@
                         <outlet property="_profileProfessionLabel" destination="ceC-XE-QGh" id="p5k-w2-Myy"/>
                         <outlet property="_profileSkillsLabel" destination="Zvp-EW-imY" id="KKE-4w-1uD"/>
                         <outlet property="_skillsAddButton" destination="xeX-uB-XML" id="zMe-fM-zHL"/>
+                        <outlet property="chartView" destination="m6T-zu-l5e" id="NSz-HU-gdp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xG3-r1-1i7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -898,7 +896,7 @@
             <objects>
                 <viewController id="2oD-VD-Ev7" customClass="PieChartViewController" customModule="Grampus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fcd-fL-1ea">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EEN-IO-XdW">
@@ -1050,7 +1048,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHy-Vz-JVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3226" y="295"/>
+            <point key="canvasLocation" x="3462" y="120"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="Zt8-DU-gp3">

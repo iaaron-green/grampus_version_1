@@ -9,7 +9,7 @@ import Alamofire
 
 class PieChartViewController : UIViewController {
     
-    let pieChartView = PieChartView()
+    let pieChartView = PieChartViewO()
     let simplePieChartView = SimplePieChartView()
     
     var achievements: NSDictionary = ["empty": "true"]

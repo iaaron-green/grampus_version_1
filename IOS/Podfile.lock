@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.8.2)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
   - JWTDecode (2.3.0)
   - SwiftyJSON (5.0.0)
   - ValidationComponents (0.3.0):
@@ -8,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - JWTDecode (~> 2.3)
   - SwiftyJSON
   - ValidationComponents
@@ -15,6 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Charts
     - JWTDecode
     - SwiftyJSON
     - ValidationComponents
@@ -22,11 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Charts: ec1f57f9340054155691e84d4544a1d239d382c5
   JWTDecode: fb77675c8049c1a7e9433c7cf448c3ce33ee4ac7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   ValidationComponents: fad1f9e9d7fbf3e10c893c880ef9d27627e90382
   ValidationToolkit: ce8e9c1a5d49eddc3266a009d46df5ea22042dbc
 
-PODFILE CHECKSUM: 47c8f7a367f68a2240952eb10e86a956290c1a79
+PODFILE CHECKSUM: 35007d6c03b117e8331ca5084201c25685cf6700
 
 COCOAPODS: 1.5.3

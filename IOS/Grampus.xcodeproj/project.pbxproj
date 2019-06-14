@@ -23,10 +23,10 @@
 		D956BFA722A7A89B001D2CE5 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */; };
 		D960170D229572E80011C9E9 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D960170C229572E80011C9E9 /* RatingTableViewCell.swift */; };
 		D9E2A3C422AA4E4200F91E3D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2A3C322AA4E4200F91E3D /* Enums.swift */; };
-		D9E73662229FD7F000D56849 /* SimplePieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7365E229FD7EF00D56849 /* SimplePieChartView.swift */; };
-		D9E73663229FD7F000D56849 /* CompatibilityShims.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7365F229FD7EF00D56849 /* CompatibilityShims.swift */; };
-		D9E73664229FD7F000D56849 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73660229FD7EF00D56849 /* PieChartView.swift */; };
-		D9E73665229FD7F000D56849 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73661229FD7EF00D56849 /* PieChartViewController.swift */; };
+		D9E73662229FD7F000D56849 /* SimplePieChartViewOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7365E229FD7EF00D56849 /* SimplePieChartViewOLD.swift */; };
+		D9E73663229FD7F000D56849 /* CompatibilityShimsOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7365F229FD7EF00D56849 /* CompatibilityShimsOLD.swift */; };
+		D9E73664229FD7F000D56849 /* PieChartViewOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73660229FD7EF00D56849 /* PieChartViewOLD.swift */; };
+		D9E73665229FD7F000D56849 /* PieChartViewControllerOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73661229FD7EF00D56849 /* PieChartViewControllerOLD.swift */; };
 		D9E73667229FE9D600D56849 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73666229FE9D600D56849 /* Methods.swift */; };
 		D9E73669229FEA4900D56849 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73668229FEA4900D56849 /* AlertView.swift */; };
 		D9E9E87922B0E17D004B220D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9E87822B0E17D004B220D /* Utilities.swift */; };
@@ -54,10 +54,10 @@
 		D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		D960170C229572E80011C9E9 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
 		D9E2A3C322AA4E4200F91E3D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		D9E7365E229FD7EF00D56849 /* SimplePieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePieChartView.swift; sourceTree = "<group>"; };
-		D9E7365F229FD7EF00D56849 /* CompatibilityShims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompatibilityShims.swift; sourceTree = "<group>"; };
-		D9E73660229FD7EF00D56849 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
-		D9E73661229FD7EF00D56849 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		D9E7365E229FD7EF00D56849 /* SimplePieChartViewOLD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePieChartViewOLD.swift; sourceTree = "<group>"; };
+		D9E7365F229FD7EF00D56849 /* CompatibilityShimsOLD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompatibilityShimsOLD.swift; sourceTree = "<group>"; };
+		D9E73660229FD7EF00D56849 /* PieChartViewOLD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewOLD.swift; sourceTree = "<group>"; };
+		D9E73661229FD7EF00D56849 /* PieChartViewControllerOLD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewControllerOLD.swift; sourceTree = "<group>"; };
 		D9E73666229FE9D600D56849 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
 		D9E73668229FEA4900D56849 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		D9E9E87822B0E17D004B220D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -118,10 +118,10 @@
 				D93B26EF2292BFEF00741E7F /* AppDelegate.swift */,
 				D9E2A3C322AA4E4200F91E3D /* Enums.swift */,
 				04DE7C20229BCE6B00BB8B88 /* TableViewCellForPieChart.swift */,
-				D9E7365F229FD7EF00D56849 /* CompatibilityShims.swift */,
-				D9E73660229FD7EF00D56849 /* PieChartView.swift */,
-				D9E73661229FD7EF00D56849 /* PieChartViewController.swift */,
-				D9E7365E229FD7EF00D56849 /* SimplePieChartView.swift */,
+				D9E7365F229FD7EF00D56849 /* CompatibilityShimsOLD.swift */,
+				D9E73660229FD7EF00D56849 /* PieChartViewOLD.swift */,
+				D9E73661229FD7EF00D56849 /* PieChartViewControllerOLD.swift */,
+				D9E7365E229FD7EF00D56849 /* SimplePieChartViewOLD.swift */,
 				D93B26F32292BFEF00741E7F /* Main.storyboard */,
 				D93B26F62292BFF000741E7F /* Assets.xcassets */,
 				D93B26F82292BFF000741E7F /* LaunchScreen.storyboard */,
@@ -229,6 +229,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Grampus/Pods-Grampus-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/ValidationComponents/ValidationComponents.framework",
@@ -237,6 +238,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ValidationComponents.framework",
@@ -274,19 +276,19 @@
 			files = (
 				D921AF9D2296BC3E00C714E2 /* ProfileTableViewController.swift in Sources */,
 				D90CFDA3229488B4002B8871 /* ProfileViewController.swift in Sources */,
-				D9E73664229FD7F000D56849 /* PieChartView.swift in Sources */,
+				D9E73664229FD7F000D56849 /* PieChartViewOLD.swift in Sources */,
 				0436D54B229413B600BE2612 /* SignUpViewController.swift in Sources */,
 				04DE7C21229BCE6B00BB8B88 /* TableViewCellForPieChart.swift in Sources */,
 				D93B26F22292BFEF00741E7F /* SignInViewController.swift in Sources */,
 				D956BFA722A7A89B001D2CE5 /* ModalViewController.swift in Sources */,
-				D9E73663229FD7F000D56849 /* CompatibilityShims.swift in Sources */,
+				D9E73663229FD7F000D56849 /* CompatibilityShimsOLD.swift in Sources */,
 				D90CFDA122948747002B8871 /* MenuTableViewController.swift in Sources */,
 				D960170D229572E80011C9E9 /* RatingTableViewCell.swift in Sources */,
 				D93B26F02292BFEF00741E7F /* AppDelegate.swift in Sources */,
-				D9E73662229FD7F000D56849 /* SimplePieChartView.swift in Sources */,
+				D9E73662229FD7F000D56849 /* SimplePieChartViewOLD.swift in Sources */,
 				D90CFD9F22948204002B8871 /* SWRevealViewController.m in Sources */,
 				D9E9E87922B0E17D004B220D /* Utilities.swift in Sources */,
-				D9E73665229FD7F000D56849 /* PieChartViewController.swift in Sources */,
+				D9E73665229FD7F000D56849 /* PieChartViewControllerOLD.swift in Sources */,
 				D9E73669229FEA4900D56849 /* AlertView.swift in Sources */,
 				D9E73667229FE9D600D56849 /* Methods.swift in Sources */,
 				D9E2A3C422AA4E4200F91E3D /* Enums.swift in Sources */,
@@ -441,10 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9FL6Z93F8;
 				INFOPLIST_FILE = Grampus/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timur.Grampus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Grampus/Grampus-Bridging-Header.h";
@@ -463,10 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9FL6Z93F8;
 				INFOPLIST_FILE = Grampus/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timur.Grampus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Grampus/Grampus-Bridging-Header.h";
