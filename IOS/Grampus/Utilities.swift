@@ -30,7 +30,6 @@ class Fetch {
         ]
         
         print("BEFORE")
-//        DispatchQueue.main.async {
         Alamofire.request(API_URL, method: .get, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { responseJSON in
             
             print("IN")
@@ -62,7 +61,6 @@ class Fetch {
                 achievements = ["empty": "true"]
             }
         }
-//    }
         print("AFTER")
         
     }

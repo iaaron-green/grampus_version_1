@@ -44,6 +44,8 @@ class ProfileTableViewController: UITableViewController {
     var skills: String?
     var achievements: String?
     var profilePicture: String?
+    var bestLooker: Int?
+    var superWorker: Int?
     
     override func loadView() {
         super.loadView()
@@ -53,8 +55,6 @@ class ProfileTableViewController: UITableViewController {
         let selectedUserIdProfile = def.string(forKey: userDefKeys.selectedUserIdProfile.rawValue)
         let profileState = def.bool(forKey: userDefKeys.profileState.rawValue)
         
-        tryAgain()
-        
         if profileState {
             fetchUserInformation(userId: userId!)
         } else {
@@ -63,19 +63,6 @@ class ProfileTableViewController: UITableViewController {
             fetchUserInformation(userId: selectedUserIdProfile!)
         }
         tableView.reloadData()
-    }
-    
-    func tryAgain() {
-        let def = UserDefaults.standard
-        let userId = def.string(forKey: userDefKeys.userId.rawValue)
-        let selectedUserIdProfile = def.string(forKey: userDefKeys.selectedUserIdProfile.rawValue)
-        let profileState = def.bool(forKey: userDefKeys.profileState.rawValue)
-        
-        if profileState {
-            Fetch.shared.fetchAchievements(userId: userId!)
-        } else {
-            Fetch.shared.fetchAchievements(userId: selectedUserIdProfile!)
-        }
     }
     
     override func viewDidLoad() {
@@ -157,12 +144,34 @@ class ProfileTableViewController: UITableViewController {
                     self.information = profile["information"] as? String
                     self.skills = profile["skills"] as? String
                     
-//                    let bestLooker = achievements["best_looker"] as? String
+                    self.bestLooker = achievements["best_looker"] as? Int
 //                    let untidy = achievements["untidy"] as? String
-//                    let superWorker = achievements["super_worker"] as? String
+                    self.superWorker = achievements["super_worker"] as? Int
 //                    let deadLiner = achievements["deadliner"] as? String
 //                    let extrovert = achievements["extrovert"] as? String
 //                    let introvert = achievements["introvert"] as? String
+                   
+                    if let unwrappedbestLooker = self.bestLooker {
+                        self.bestLooker = unwrappedbestLooker
+                    } else {
+                        self.bestLooker = 0
+                    }
+                    
+                    if let unwrappedsuperWorker = self.superWorker {
+                        self.superWorker = unwrappedsuperWorker
+                    } else {
+                        self.superWorker = 0
+                    }
+                    
+                    print(self.bestLooker!)
+                    print(self.superWorker!)
+                    
+                    let def = UserDefaults.standard
+                    def.set(self.bestLooker!, forKey: "bestLooker")
+                    def.synchronize()
+                    
+                    def.set(self.superWorker!, forKey: "superWorker")
+                    def.synchronize()
                     
                     if let unwrappedFullName = self.fullName {
                         self.fullName = unwrappedFullName
@@ -207,7 +216,7 @@ class ProfileTableViewController: UITableViewController {
                     }
                     
                     
-                    self.pieChartViewController.setUpChart()
+//                    self.pieChartViewController.setUpChart()
                     self.tableView.reloadData()
                     self.setUpProfile(fullName: self.fullName!, profession: self.profession!, likes: self.likes!, dislikes: self.dislikes!, information: self.information!, skills: self.skills!)
                 }
