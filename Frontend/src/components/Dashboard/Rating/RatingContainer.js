@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // components
 import RatingView from './RatingView';
+import SearchBar from './SearchBar';
 
 import { profilesSelectors, profilesOperations } from '../../../redux/profiles';
 
@@ -18,6 +19,7 @@ class RatingContainer extends Component {
     const { profiles, addLikes, addDislikes } = this.props;
     return (
       <div>
+        <SearchBar />
         <RatingView
           profiles={profiles}
           addLikes={addLikes}

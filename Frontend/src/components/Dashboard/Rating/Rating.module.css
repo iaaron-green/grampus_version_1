@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   border: 2px solid rgb(167, 158, 158);
-  border-top: none;
+  border-top: 1px solid rgb(143, 136, 136);
   padding: 2rem;
   height: 180px;
   overflow-wrap: 'break-word';
