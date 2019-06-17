@@ -3,3 +3,24 @@
   padding: 25px;
   border-bottom: 2px solid #e8e8e6;
 }
+
+.informationText {
+  color: rgb(134, 130, 124);
+}
+
+.addingBlock {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0px solid rgb(134, 130, 124);
+  font-size: 25px;
+  cursor: pointer;
+  color: darkslategrey;
+  background-color: lightgreen;
+}
+
+.addingButton {
+  margin-left: 90%;
+  margin-bottom: 5%;
+  width: 200px;
+}

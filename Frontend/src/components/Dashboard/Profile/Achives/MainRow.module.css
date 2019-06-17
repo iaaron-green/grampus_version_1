@@ -6,7 +6,25 @@
   height: 100px;
 }
 
-.listElement {
+.imgBlock {
+  border-radius: 50%;
+  width: 150px;
+  height: 100px;
+  border: 1px solid rgb(73, 69, 69);
+}
+
+.featureName {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(122, 113, 101);
+  font-size: 16px;
+}
+
+.img {
+  background-repeat: no-repeat;
+  align-content: center;
+}
+
+/* .listElement {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -16,3 +34,8 @@
   float: left;
   border: 1px solid rgb(0, 0, 0);
 }
+
+.images {
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0);
+} */

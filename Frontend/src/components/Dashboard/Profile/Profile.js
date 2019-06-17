@@ -5,6 +5,7 @@ import Person from './Person/Person';
 import Achives from './Achives/Achives';
 import Information from './Information/Information';
 import Skills from './Skills/Skills';
+import Chart from './Chart/Chart';
 
 import { userSelectors } from '../../../redux/user';
 import { profilesSelectors } from '../../../redux/profiles';
@@ -19,6 +20,7 @@ const Profile = ({ profiles = [], user }) => {
       <Achives />
       <Information profile={userProfile} />
       <Skills />
+      <Chart />
     </div>
   );
 };
