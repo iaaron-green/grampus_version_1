@@ -7,19 +7,22 @@ import Information from './Information/Information';
 import Skills from './Skills/Skills';
 import Chart from './Chart/Chart';
 
-import { userSelectors } from '../../../redux/user';
-import { profilesSelectors } from '../../../redux/profiles';
+import { userOperations, userSelectors } from '../../../redux/user';
+import { authSelectors } from '../../../redux/auth';
 
 import styles from './Profile.module.css';
 
-const Profile = ({ profiles = [], user }) => {
-  const userProfile = profiles.filter(profile => profile.id === user.userId);
+const Profile = ({ user, token, updateCurrentUser }) => {
   return (
     <div className={styles.profile}>
-      <Person user={user} profile={userProfile} />
+      <Person user={user} />
       <Achives />
-      <Information profile={userProfile} />
-      <Skills />
+      <Information
+        info={user.information}
+        token={token}
+        update={updateCurrentUser}
+      />
+      <Skills skill={user.skills} token={token} update={updateCurrentUser} />
       <Chart />
     </div>
   );
@@ -27,10 +30,14 @@ const Profile = ({ profiles = [], user }) => {
 
 const mapStateToProps = state => ({
   user: userSelectors.getUser(state),
-  profiles: profilesSelectors.getAllProfiles(state),
+  token: authSelectors.getToken(state),
 });
+
+const mapDispatchToProps = {
+  updateCurrentUser: userOperations.updateCurrentUser,
+};
 
 export default connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(Profile);

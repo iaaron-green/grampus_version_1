@@ -5,7 +5,7 @@ import types from './userActionTypes';
 const userId = (state = null, { type, payload }) => {
   switch (type) {
     case types.USER_FETCH_SUCCESS:
-      return payload.id;
+      return payload.user.id;
 
     case types.USER_FETCH_ERROR:
       return null;
@@ -18,7 +18,7 @@ const userId = (state = null, { type, payload }) => {
 const userName = (state = null, { type, payload }) => {
   switch (type) {
     case types.USER_FETCH_SUCCESS:
-      return payload.username;
+      return payload.user.username;
 
     case types.USER_FETCH_ERROR:
       return null;
@@ -31,7 +31,7 @@ const userName = (state = null, { type, payload }) => {
 const fullName = (state = null, { type, payload }) => {
   switch (type) {
     case types.USER_FETCH_SUCCESS:
-      return payload.fullName;
+      return payload.user.fullName;
 
     case types.USER_FETCH_ERROR:
       return null;
@@ -44,7 +44,46 @@ const fullName = (state = null, { type, payload }) => {
 const jobTitle = (state = null, { type, payload }) => {
   switch (type) {
     case types.USER_FETCH_SUCCESS:
-      return payload.jobTitle;
+      return payload.user.jobTitle;
+
+    case types.USER_FETCH_ERROR:
+      return null;
+
+    default:
+      return state;
+  }
+};
+
+const information = (state = null, { type, payload }) => {
+  switch (type) {
+    case types.USER_FETCH_SUCCESS:
+      return payload.information;
+
+    case types.USER_FETCH_ERROR:
+      return null;
+
+    default:
+      return state;
+  }
+};
+
+const skills = (state = null, { type, payload }) => {
+  switch (type) {
+    case types.USER_FETCH_SUCCESS:
+      return payload.skills;
+
+    case types.USER_FETCH_ERROR:
+      return null;
+
+    default:
+      return state;
+  }
+};
+
+const userPicture = (state = null, { type, payload }) => {
+  switch (type) {
+    case types.USER_FETCH_SUCCESS:
+      return payload.profilePicture;
 
     case types.USER_FETCH_ERROR:
       return null;
@@ -59,4 +98,7 @@ export default combineReducers({
   userName,
   fullName,
   jobTitle,
+  information,
+  skills,
+  userPicture,
 });

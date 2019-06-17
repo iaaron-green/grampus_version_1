@@ -14,9 +14,18 @@
   border: none;
   font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
-  color: blue;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.button svg {
+  width: 25px;
+  fill: #57dd49;
+  transition: fill 0.2s linear;
+}
+
+.button:hover svg {
+  fill: #41c420;
 }
 
 .img {

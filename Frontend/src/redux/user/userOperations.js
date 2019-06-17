@@ -15,11 +15,26 @@ const getCurrentUser = token => dispatch => {
   axios
     .get(`/api/profiles/${decoded.id}`)
     .then(({ data }) => {
-      dispatch(actions.fetchUserSuccess(data.user));
+      console.log(data);
+      dispatch(actions.fetchUserSuccess(data.profile));
+    })
+    .catch(error => dispatch(actions.fetchUserError(error)));
+};
+
+const updateCurrentUser = userData => dispatch => {
+  dispatch(actions.fetchUserRequest());
+  setBaseURL();
+  setJWTToken(userData.token);
+
+  axios
+    .post(`/api/profiles/`, userData.update)
+    .then(({ data }) => {
+      dispatch(actions.fetchUserSuccess(data));
     })
     .catch(error => dispatch(actions.fetchUserError(error)));
 };
 
 export default {
   getCurrentUser,
+  updateCurrentUser,
 };

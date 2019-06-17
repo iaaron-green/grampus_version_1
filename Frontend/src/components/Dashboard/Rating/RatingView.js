@@ -1,4 +1,6 @@
 import React from 'react';
+import { ReactComponent as Likes } from './assets/like.svg';
+import { ReactComponent as Dislikes } from './assets/dislike.svg';
 // styles
 import styles from './Rating.module.css';
 
@@ -26,14 +28,14 @@ const RatingView = ({ profiles = [] }) => {
                 className={styles.button}
                 onClick={() => addLike(id)}
               >
-                Like
+                <Likes />
               </button>
               <button
                 type="button"
                 className={styles.button}
                 onClick={() => addDislike(id)}
               >
-                Dislike
+                <Dislikes />
               </button>
             </div>
           </li>
