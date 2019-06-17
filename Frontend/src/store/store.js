@@ -4,9 +4,9 @@ import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 // reducers
-import profilesReducer from '../redux/profiles/profilesReducer';
-import userReducer from '../redux/user/userReducer';
-import authReducer from '../redux/auth/authReducer';
+import { profilesReducer } from '../redux/profiles';
+import { userReducer } from '../redux/user';
+import { authReducer } from '../redux/auth';
 
 const rootPersistConfig = {
   key: 'root',
