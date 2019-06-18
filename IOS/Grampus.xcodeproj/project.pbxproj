@@ -20,6 +20,7 @@
 		D93B26F52292BFEF00741E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93B26F32292BFEF00741E7F /* Main.storyboard */; };
 		D93B26F72292BFF000741E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93B26F62292BFF000741E7F /* Assets.xcassets */; };
 		D93B26FA2292BFF000741E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93B26F82292BFF000741E7F /* LaunchScreen.storyboard */; };
+		D93CE89022B8D91B00B8B6DE /* AchievementsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93CE88F22B8D91B00B8B6DE /* AchievementsCollectionViewCell.swift */; };
 		D956BFA722A7A89B001D2CE5 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */; };
 		D960170D229572E80011C9E9 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D960170C229572E80011C9E9 /* RatingTableViewCell.swift */; };
 		D9E2A3C422AA4E4200F91E3D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2A3C322AA4E4200F91E3D /* Enums.swift */; };
@@ -51,6 +52,7 @@
 		D93B26F62292BFF000741E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D93B26F92292BFF000741E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D93B26FB2292BFF000741E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93CE88F22B8D91B00B8B6DE /* AchievementsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		D960170C229572E80011C9E9 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
 		D9E2A3C322AA4E4200F91E3D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				D960170C229572E80011C9E9 /* RatingTableViewCell.swift */,
 				D90CFDA022948747002B8871 /* MenuTableViewController.swift */,
 				D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */,
+				D93CE88F22B8D91B00B8B6DE /* AchievementsCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				D921AF9D2296BC3E00C714E2 /* ProfileTableViewController.swift in Sources */,
 				D90CFDA3229488B4002B8871 /* ProfileViewController.swift in Sources */,
+				D93CE89022B8D91B00B8B6DE /* AchievementsCollectionViewCell.swift in Sources */,
 				D9E73664229FD7F000D56849 /* PieChartViewOLD.swift in Sources */,
 				0436D54B229413B600BE2612 /* SignUpViewController.swift in Sources */,
 				04DE7C21229BCE6B00BB8B88 /* TableViewCellForPieChart.swift in Sources */,
@@ -443,7 +447,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9FL6Z93F8;
 				INFOPLIST_FILE = Grampus/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timur.Grampus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Grampus/Grampus-Bridging-Header.h";
@@ -462,7 +469,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9FL6Z93F8;
 				INFOPLIST_FILE = Grampus/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.timur.Grampus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Grampus/Grampus-Bridging-Header.h";

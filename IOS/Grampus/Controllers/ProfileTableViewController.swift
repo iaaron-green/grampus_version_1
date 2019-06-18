@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Charts
 
-class ProfileTableViewController: UITableViewController {
+class ProfileTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var _menuBarButton: UIBarButtonItem!
     @IBOutlet weak var _navigationBar: UINavigationBar!
@@ -23,6 +23,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var _profileDislikeLabel: UILabel!
     
     //Achievement cell
+    @IBOutlet weak var _collectionView: UICollectionView!
     
     //Information cell
     @IBOutlet weak var _profileInformationLabel: UILabel!
@@ -37,6 +38,7 @@ class ProfileTableViewController: UITableViewController {
     
     let alert = AlertView()
     let menuVC = MenuTableViewController()
+    let reuseCell = "achievementCell"
     
     var fullName: String?
     var email: String?
@@ -53,6 +55,8 @@ class ProfileTableViewController: UITableViewController {
     var deadLiner: Int?
     var extrovert: Int?
     var introvert: Int?
+    
+    var achievementsArray: [Achievements]?
     
     override func loadView() {
         super.loadView()
@@ -75,6 +79,9 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _collectionView.delegate = self
+        _collectionView.dataSource = self
+        
         navBarAppearance()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
@@ -90,8 +97,8 @@ class ProfileTableViewController: UITableViewController {
             
             self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         }
-        
-//        setUpCharts()
+        _collectionView.delegate = self
+        _collectionView.dataSource = self
         
         tableView.reloadData()
     }
@@ -108,6 +115,53 @@ class ProfileTableViewController: UITableViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func mapAchievements() {
+        
+        if bestLooker! >= 1 {
+            let index = achievementsArray?.count
+            achievementsArray?[index!].type = "best looker"
+            achievementsArray?[index!].count = bestLooker!
+            
+            let achive = Achievements(type: <#T##String?#>, count: <#T##Int?#>, image: <#T##UIImage?#>)
+
+        }
+        
+        if superWorker! >= 1 {
+            let index = achievementsArray?.count
+            achievementsArray?[index!].type = "superWorker"
+            achievementsArray?[index!].count = superWorker!
+        }
+        
+        if extrovert! >= 1 {
+            let index = achievementsArray?.count
+            achievementsArray?[index!].type = "extrovert"
+            achievementsArray?[index!].count = extrovert!
+        }
+        
+        if deadLiner! >= 1 {
+            let index = achievementsArray?.count
+            achievementsArray?[index!].type = "deadLiner"
+            achievementsArray?[index!].count = deadLiner!
+        }
+        
+        if untidy! >= 1 {
+            let index = achievementsArray?.count
+            achievementsArray?[index!].type = "untidy"
+            achievementsArray?[index!].count = untidy!
+        }
+        
+        if introvert! >= 1 {
+            let index = achievementsArray?.count
+            achievementsArray?[index!].type = "introvert"
+            achievementsArray?[index!].count = introvert!
+        }
+        print("ACHI COUNT ___________________________________________")
+        print(achievementsArray?.count)
+        
+        _collectionView.reloadData()
+        
     }
     
     func fetchUserInformation(userId: String) {
@@ -243,6 +297,7 @@ class ProfileTableViewController: UITableViewController {
                     self.setUpProfile(fullName: self.fullName!, profession: self.profession!, likes: self.likes!, dislikes: self.dislikes!, information: self.information!, skills: self.skills!)
                     
                     self.setUpCharts()
+                    self.mapAchievements()
                     self.tableView.reloadData()
                 }
                 
@@ -259,6 +314,7 @@ class ProfileTableViewController: UITableViewController {
         chartView.rotationAngle = 0
         chartView.rotationEnabled = false
         chartView.isUserInteractionEnabled = false
+        chartView.drawEntryLabelsEnabled = false
 
         var bestLookerColor = UIColor.clear
         var superWorkerColor = UIColor.clear
@@ -271,46 +327,45 @@ class ProfileTableViewController: UITableViewController {
         var colorArray: [UIColor] = []
         
         if self.bestLooker! != 0 {
-            entries.append(PieChartDataEntry(value: Double(self.bestLooker!), label: "\(self.bestLooker!)"))
-            bestLookerColor = UIColor.cyan
+            entries.append(PieChartDataEntry(value: Double(self.bestLooker!), label: "Best looker"))
+            bestLookerColor = UIColor.red
             colorArray.append(bestLookerColor)
         }
         
         if self.superWorker! != 0 {
-            entries.append(PieChartDataEntry(value: Double(self.superWorker!), label: "\(self.superWorker!)"))
-            superWorkerColor = UIColor.red
+            entries.append(PieChartDataEntry(value: Double(self.superWorker!), label: "Super worker"))
+            superWorkerColor = UIColor.orange
             colorArray.append(superWorkerColor)
         }
         
         if self.extrovert! != 0 {
-            entries.append(PieChartDataEntry(value: Double(self.extrovert!), label: "\(self.extrovert!)"))
-            extrovertColor = UIColor.blue
+            entries.append(PieChartDataEntry(value: Double(self.extrovert!), label: "Extrovert"))
+            extrovertColor = UIColor.purple
             colorArray.append(extrovertColor)
         }
         
         if self.untidy! != 0 {
-            entries.append(PieChartDataEntry(value: Double(self.untidy!), label: "\(self.untidy!)"))
-            untidyColor = UIColor.gray
+            entries.append(PieChartDataEntry(value: Double(self.untidy!), label: "Untidy"))
+            untidyColor = UIColor( red: CGFloat(0/255.0), green: CGFloat(110/255.0), blue: CGFloat(255/255.0), alpha: CGFloat(0.5) )
             colorArray.append(untidyColor)
         }
         
         if self.deadLiner! != 0 {
-            entries.append(PieChartDataEntry(value: Double(self.deadLiner!), label: "\(self.deadLiner!)"))
-            deadLinerColor = UIColor.black
+            entries.append(PieChartDataEntry(value: Double(self.deadLiner!), label: "Deadliner"))
+            deadLinerColor = UIColor.green
             colorArray.append(deadLinerColor)
         }
         
         if self.introvert! != 0 {
-            entries.append(PieChartDataEntry(value: Double(self.introvert!), label: "\(self.introvert!)"))
-            introvertColor = UIColor.brown
+            entries.append(PieChartDataEntry(value: Double(self.introvert!), label: "Introvert"))
+            introvertColor = UIColor.blue
             colorArray.append(introvertColor)
         }
-        
         print(entries)
         
         let dataSet = PieChartDataSet(entries: entries, label: "")
         dataSet.colors = colorArray
-        dataSet.drawValuesEnabled = false
+        dataSet.drawValuesEnabled = true
         chartView.data = PieChartData(dataSet: dataSet)
         
     }
@@ -429,4 +484,37 @@ class ProfileTableViewController: UITableViewController {
         return 5
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        var achive: [Achievements]!
+        print("ACHI COUNT ___________________________________________")
+
+        print(achievementsArray?.count)
+        
+        if let unwrappedCount = achievementsArray {
+            achive = unwrappedCount
+        } else {
+            return 0
+        }
+        
+        return achive.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementsCollectionViewCell
+        
+        cell._achievementsLabel.text = achievementsArray![indexPath.count].type
+//        cell._achievementsImageView.image =
+        
+        return cell
+    }
+    
+}
+
+
+struct Achievements {
+    var type: String?
+    var count: Int?
+    var image: UIImage?
 }

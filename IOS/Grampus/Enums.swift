@@ -14,7 +14,7 @@ enum segueIdentifier: String {
 }
 
 enum dURL: String {
-    case dynamicURL = "http://10.11.1.48:8080/api/"
+    case dynamicURL = "http://10.11.1.104:8080/api/"
 }
 
 enum userDefKeys: String {
