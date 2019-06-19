@@ -40,6 +40,10 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
     let menuVC = MenuTableViewController()
     let reuseCell = "achievementCell"
     
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
+    
     var fullName: String?
     var email: String?
     var profession: String?
@@ -56,7 +60,7 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
     var extrovert: Int?
     var introvert: Int?
     
-    var achievementsArray: [Achievements]?
+    var achievementsArray = [Achievements]()
     
     override func loadView() {
         super.loadView()
@@ -79,8 +83,19 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        screenSize = UIScreen.main.bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+        
         _collectionView.delegate = self
         _collectionView.dataSource = self
+        _collectionView.isScrollEnabled = true
+        _collectionView.showsHorizontalScrollIndicator = true
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 1
         
         navBarAppearance()
         tableView.rowHeight = UITableView.automaticDimension
@@ -120,45 +135,50 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
     func mapAchievements() {
         
         if bestLooker! >= 1 {
-            let index = achievementsArray?.count
-            achievementsArray?[index!].type = "best looker"
-            achievementsArray?[index!].count = bestLooker!
-            
-            let achive = Achievements(type: <#T##String?#>, count: <#T##Int?#>, image: <#T##UIImage?#>)
-
+            let count = (bestLooker! / 25)
+            let image = UIImage(named: "best_looker")
+            print(count)
+            let achive = Achievements(type: "best looker", count: count, image: image)
+            achievementsArray.append(achive)
         }
         
         if superWorker! >= 1 {
-            let index = achievementsArray?.count
-            achievementsArray?[index!].type = "superWorker"
-            achievementsArray?[index!].count = superWorker!
+            let count = (superWorker! / 25)
+            let image = UIImage(named: "super_worker")
+            let achive = Achievements(type: "super_worker", count: count, image: image)
+            achievementsArray.append(achive)
         }
         
         if extrovert! >= 1 {
-            let index = achievementsArray?.count
-            achievementsArray?[index!].type = "extrovert"
-            achievementsArray?[index!].count = extrovert!
+            let count = (extrovert! / 25)
+            let image = UIImage(named: "extrovert")
+            let achive = Achievements(type: "extrovert", count: count, image: image)
+            achievementsArray.append(achive)
         }
         
         if deadLiner! >= 1 {
-            let index = achievementsArray?.count
-            achievementsArray?[index!].type = "deadLiner"
-            achievementsArray?[index!].count = deadLiner!
+            let count = (deadLiner! / 25)
+            let image = UIImage(named: "deadliner")
+            let achive = Achievements(type: "deadliner", count: count, image: image)
+            achievementsArray.append(achive)
         }
         
         if untidy! >= 1 {
-            let index = achievementsArray?.count
-            achievementsArray?[index!].type = "untidy"
-            achievementsArray?[index!].count = untidy!
+            let count = (untidy! / 25)
+            let image = UIImage(named: "untidy")
+            let achive = Achievements(type: "untidy", count: count, image: image)
+            achievementsArray.append(achive)
         }
         
         if introvert! >= 1 {
-            let index = achievementsArray?.count
-            achievementsArray?[index!].type = "introvert"
-            achievementsArray?[index!].count = introvert!
+            let count = (introvert! / 25)
+            let image = UIImage(named: "introvert")
+            let achive = Achievements(type: "introvert", count: count, image: image)
+            achievementsArray.append(achive)
         }
+        
         print("ACHI COUNT ___________________________________________")
-        print(achievementsArray?.count)
+        print(achievementsArray.count)
         
         _collectionView.reloadData()
         
@@ -183,7 +203,7 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
             case .success :
                 
                 if let result = responseJSON.result.value {
-                   
+                    
                     let json = result as! NSDictionary
                     let profile = json["profile"] as! NSDictionary
                     let achievements = json["achievements"] as! NSDictionary
@@ -196,7 +216,7 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
                     print("achievements!!!!!!!!!!!!!!!!!!!")
                     print(achievements)
                     print("end!!!!!!!!!!!!!!!!!!!")
-
+                    
                     self.fullName = user["fullName"] as? String
                     self.profession = user["jobTitle"] as? String
                     self.email = user["username"] as? String
@@ -211,8 +231,8 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
                     self.untidy = achievements["untidy"] as? Int
                     self.deadLiner = achievements["deadliner"] as? Int
                     self.introvert = achievements["introvert"] as? Int
-
-                   
+                    
+                    
                     if let unwrappedbestLooker = self.bestLooker {
                         self.bestLooker = unwrappedbestLooker
                     } else {
@@ -248,9 +268,6 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
                     } else {
                         self.introvert = 0
                     }
-                    
-                    print(self.bestLooker!)
-                    print(self.superWorker!)
                     
                     if let unwrappedFullName = self.fullName {
                         self.fullName = unwrappedFullName
@@ -315,7 +332,7 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
         chartView.rotationEnabled = false
         chartView.isUserInteractionEnabled = false
         chartView.drawEntryLabelsEnabled = false
-
+        
         var bestLookerColor = UIColor.clear
         var superWorkerColor = UIColor.clear
         var extrovertColor = UIColor.clear
@@ -463,6 +480,12 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
             return UITableView.automaticDimension
         } else if indexPath.row == 4{
             return 300.0
+        } else if indexPath.row == 1{
+            if achievementsArray.count == 0 {
+                return 0
+            } else {
+                return 90.0
+            }
         } else {
             return 120.0
         }
@@ -486,32 +509,31 @@ class ProfileTableViewController: UITableViewController, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        var achive: [Achievements]!
-        print("ACHI COUNT ___________________________________________")
-
-        print(achievementsArray?.count)
+        print("Achievements COUNT ___________________________________________")
+        print(achievementsArray.count)
         
-        if let unwrappedCount = achievementsArray {
-            achive = unwrappedCount
-        } else {
-            return 0
-        }
-        
-        return achive.count
+        return achievementsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementsCollectionViewCell
         
-        cell._achievementsLabel.text = achievementsArray![indexPath.count].type
-//        cell._achievementsImageView.image =
+        print("indexPath")
+        print(indexPath.count)
         
+        cell._achievementsLabel.text = String(describing: achievementsArray[indexPath.row].count!)
+        cell._achievementsImageView.image = achievementsArray[indexPath.row].image
         return cell
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  
+        return CGSize(width: screenWidth/6, height: screenWidth/4);
+        
+    }
+    
 }
-
 
 struct Achievements {
     var type: String?
