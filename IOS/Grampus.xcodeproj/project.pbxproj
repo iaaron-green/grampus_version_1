@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0436D54B229413B600BE2612 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436D54A229413B600BE2612 /* SignUpViewController.swift */; };
+		04DE7C21229BCE6B00BB8B88 /* TableViewCellForPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE7C20229BCE6B00BB8B88 /* TableViewCellForPieChart.swift */; };
+		410DF94970F197AFAE034B4E /* Pods_Grampus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4997C24BD925AC8EFA391D /* Pods_Grampus.framework */; };
+		D90CFD9F22948204002B8871 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90CFD9D22948204002B8871 /* SWRevealViewController.m */; };
+		D90CFDA122948747002B8871 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CFDA022948747002B8871 /* MenuTableViewController.swift */; };
+		D90CFDA3229488B4002B8871 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CFDA2229488B4002B8871 /* ProfileViewController.swift */; };
+		D90CFDA5229488C5002B8871 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CFDA4229488C5002B8871 /* RatingViewController.swift */; };
+		D921AF9D2296BC3E00C714E2 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921AF9C2296BC3E00C714E2 /* ProfileTableViewController.swift */; };
+		D93B26F02292BFEF00741E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B26EF2292BFEF00741E7F /* AppDelegate.swift */; };
+		D93B26F22292BFEF00741E7F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B26F12292BFEF00741E7F /* SignInViewController.swift */; };
+		D93B26F52292BFEF00741E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93B26F32292BFEF00741E7F /* Main.storyboard */; };
+		D93B26F72292BFF000741E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93B26F62292BFF000741E7F /* Assets.xcassets */; };
+		D93B26FA2292BFF000741E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93B26F82292BFF000741E7F /* LaunchScreen.storyboard */; };
+		D956BFA722A7A89B001D2CE5 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */; };
+		D960170D229572E80011C9E9 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D960170C229572E80011C9E9 /* RatingTableViewCell.swift */; };
+		D9E2A3C422AA4E4200F91E3D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2A3C322AA4E4200F91E3D /* Enums.swift */; };
+		D9E73662229FD7F000D56849 /* SimplePieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7365E229FD7EF00D56849 /* SimplePieChartView.swift */; };
+		D9E73663229FD7F000D56849 /* CompatibilityShims.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7365F229FD7EF00D56849 /* CompatibilityShims.swift */; };
+		D9E73664229FD7F000D56849 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73660229FD7EF00D56849 /* PieChartView.swift */; };
+		D9E73665229FD7F000D56849 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73661229FD7EF00D56849 /* PieChartViewController.swift */; };
+		D9E73667229FE9D600D56849 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73666229FE9D600D56849 /* Methods.swift */; };
+		D9E73669229FEA4900D56849 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E73668229FEA4900D56849 /* AlertView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0436D54A229413B600BE2612 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		04DE7C20229BCE6B00BB8B88 /* TableViewCellForPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForPieChart.swift; sourceTree = "<group>"; };
+		4E4997C24BD925AC8EFA391D /* Pods_Grampus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grampus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0300824BAF5CC14DEF384AC /* Pods-Grampus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grampus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grampus/Pods-Grampus.debug.xcconfig"; sourceTree = "<group>"; };
+		D90CFD9C22948203002B8871 /* Grampus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grampus-Bridging-Header.h"; sourceTree = "<group>"; };
+		D90CFD9D22948204002B8871 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		D90CFD9E22948204002B8871 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		D90CFDA022948747002B8871 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		D90CFDA2229488B4002B8871 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D90CFDA4229488C5002B8871 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		D921AF9C2296BC3E00C714E2 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		D93B26EC2292BFEF00741E7F /* Grampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grampus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93B26EF2292BFEF00741E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D93B26F12292BFEF00741E7F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D93B26F42292BFEF00741E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D93B26F62292BFF000741E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D93B26F92292BFF000741E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D93B26FB2292BFF000741E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		D960170C229572E80011C9E9 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
+		D9E2A3C322AA4E4200F91E3D /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		D9E7365E229FD7EF00D56849 /* SimplePieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePieChartView.swift; sourceTree = "<group>"; };
+		D9E7365F229FD7EF00D56849 /* CompatibilityShims.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompatibilityShims.swift; sourceTree = "<group>"; };
+		D9E73660229FD7EF00D56849 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		D9E73661229FD7EF00D56849 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		D9E73666229FE9D600D56849 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
+		D9E73668229FEA4900D56849 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		E2094CC2A80A1DC04FBFB3D9 /* Pods-Grampus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grampus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grampus/Pods-Grampus.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D93B26E92292BFEF00741E7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410DF94970F197AFAE034B4E /* Pods_Grampus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50D6E62A6F954BA4799676BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E4997C24BD925AC8EFA391D /* Pods_Grampus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A986F647EE9CC437F0635AA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0300824BAF5CC14DEF384AC /* Pods-Grampus.debug.xcconfig */,
+				E2094CC2A80A1DC04FBFB3D9 /* Pods-Grampus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D93B26E32292BFEF00741E7F = {
+			isa = PBXGroup;
+			children = (
+				D93B26EE2292BFEF00741E7F /* Grampus */,
+				D93B26ED2292BFEF00741E7F /* Products */,
+				A986F647EE9CC437F0635AA1 /* Pods */,
+				50D6E62A6F954BA4799676BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D93B26ED2292BFEF00741E7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D93B26EC2292BFEF00741E7F /* Grampus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D93B26EE2292BFEF00741E7F /* Grampus */ = {
+			isa = PBXGroup;
+			children = (
+				D965BC9B22949ACF001B71C3 /* Controllers */,
+				D93B26EF2292BFEF00741E7F /* AppDelegate.swift */,
+				D9E2A3C322AA4E4200F91E3D /* Enums.swift */,
+				04DE7C20229BCE6B00BB8B88 /* TableViewCellForPieChart.swift */,
+				D9E7365F229FD7EF00D56849 /* CompatibilityShims.swift */,
+				D9E73660229FD7EF00D56849 /* PieChartView.swift */,
+				D9E73661229FD7EF00D56849 /* PieChartViewController.swift */,
+				D9E7365E229FD7EF00D56849 /* SimplePieChartView.swift */,
+				D93B26F32292BFEF00741E7F /* Main.storyboard */,
+				D93B26F62292BFF000741E7F /* Assets.xcassets */,
+				D93B26F82292BFF000741E7F /* LaunchScreen.storyboard */,
+				D93B26FB2292BFF000741E7F /* Info.plist */,
+				D90CFD9E22948204002B8871 /* SWRevealViewController.h */,
+				D90CFD9D22948204002B8871 /* SWRevealViewController.m */,
+				D90CFD9C22948203002B8871 /* Grampus-Bridging-Header.h */,
+				D90CFDA2229488B4002B8871 /* ProfileViewController.swift */,
+				D9E73666229FE9D600D56849 /* Methods.swift */,
+				D9E73668229FEA4900D56849 /* AlertView.swift */,
+			);
+			path = Grampus;
+			sourceTree = "<group>";
+		};
+		D965BC9B22949ACF001B71C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D93B26F12292BFEF00741E7F /* SignInViewController.swift */,
+				0436D54A229413B600BE2612 /* SignUpViewController.swift */,
+				D921AF9C2296BC3E00C714E2 /* ProfileTableViewController.swift */,
+				D90CFDA4229488C5002B8871 /* RatingViewController.swift */,
+				D960170C229572E80011C9E9 /* RatingTableViewCell.swift */,
+				D90CFDA022948747002B8871 /* MenuTableViewController.swift */,
+				D956BFA622A7A89B001D2CE5 /* ModalViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D93B26EB2292BFEF00741E7F /* Grampus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93B26FE2292BFF000741E7F /* Build configuration list for PBXNativeTarget "Grampus" */;
+			buildPhases = (
+				A8BC47F09DDA4213BCE11875 /* [CP] Check Pods Manifest.lock */,
+				D93B26E82292BFEF00741E7F /* Sources */,
+				D93B26E92292BFEF00741E7F /* Frameworks */,
+				D93B26EA2292BFEF00741E7F /* Resources */,
+				996C5014065BE0C311B12AF2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Grampus;
+			productName = Grampus;
+			productReference = D93B26EC2292BFEF00741E7F /* Grampus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D93B26E42292BFEF00741E7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Тимур Кошевой";
+				TargetAttributes = {
+					D93B26EB2292BFEF00741E7F = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = D93B26E72292BFEF00741E7F /* Build configuration list for PBXProject "Grampus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D93B26E32292BFEF00741E7F;
+			productRefGroup = D93B26ED2292BFEF00741E7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D93B26EB2292BFEF00741E7F /* Grampus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D93B26EA2292BFEF00741E7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93B26FA2292BFF000741E7F /* LaunchScreen.storyboard in Resources */,
+				D93B26F72292BFF000741E7F /* Assets.xcassets in Resources */,
+				D93B26F52292BFEF00741E7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		996C5014065BE0C311B12AF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Grampus/Pods-Grampus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/ValidationComponents/ValidationComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/ValidationToolkit/ValidationToolkit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ValidationComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ValidationToolkit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grampus/Pods-Grampus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BC47F09DDA4213BCE11875 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Grampus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D93B26E82292BFEF00741E7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D921AF9D2296BC3E00C714E2 /* ProfileTableViewController.swift in Sources */,
+				D90CFDA3229488B4002B8871 /* ProfileViewController.swift in Sources */,
+				D9E73664229FD7F000D56849 /* PieChartView.swift in Sources */,
+				0436D54B229413B600BE2612 /* SignUpViewController.swift in Sources */,
+				04DE7C21229BCE6B00BB8B88 /* TableViewCellForPieChart.swift in Sources */,
+				D93B26F22292BFEF00741E7F /* SignInViewController.swift in Sources */,
+				D956BFA722A7A89B001D2CE5 /* ModalViewController.swift in Sources */,
+				D9E73663229FD7F000D56849 /* CompatibilityShims.swift in Sources */,
+				D90CFDA122948747002B8871 /* MenuTableViewController.swift in Sources */,
+				D960170D229572E80011C9E9 /* RatingTableViewCell.swift in Sources */,
+				D93B26F02292BFEF00741E7F /* AppDelegate.swift in Sources */,
+				D9E73662229FD7F000D56849 /* SimplePieChartView.swift in Sources */,
+				D90CFD9F22948204002B8871 /* SWRevealViewController.m in Sources */,
+				D9E73665229FD7F000D56849 /* PieChartViewController.swift in Sources */,
+				D9E73669229FEA4900D56849 /* AlertView.swift in Sources */,
+				D9E73667229FE9D600D56849 /* Methods.swift in Sources */,
+				D9E2A3C422AA4E4200F91E3D /* Enums.swift in Sources */,
+				D90CFDA5229488C5002B8871 /* RatingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D93B26F32292BFEF00741E7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D93B26F42292BFEF00741E7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D93B26F82292BFF000741E7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D93B26F92292BFF000741E7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D93B26FC2292BFF000741E7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D93B26FD2292BFF000741E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D93B26FF2292BFF000741E7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0300824BAF5CC14DEF384AC /* Pods-Grampus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9FL6Z93F8;
+				INFOPLIST_FILE = Grampus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timur.Grampus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Grampus/Grampus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D93B27002292BFF000741E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2094CC2A80A1DC04FBFB3D9 /* Pods-Grampus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9FL6Z93F8;
+				INFOPLIST_FILE = Grampus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timur.Grampus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Grampus/Grampus-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D93B26E72292BFEF00741E7F /* Build configuration list for PBXProject "Grampus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93B26FC2292BFF000741E7F /* Debug */,
+				D93B26FD2292BFF000741E7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93B26FE2292BFF000741E7F /* Build configuration list for PBXNativeTarget "Grampus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93B26FF2292BFF000741E7F /* Debug */,
+				D93B27002292BFF000741E7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D93B26E42292BFEF00741E7F /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module ValidationToolkit {
+  umbrella header "ValidationToolkit-umbrella.h"
+
+  export *
+  module * { export * }
+}
